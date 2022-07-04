@@ -23,14 +23,20 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "precommit": "lint-staged",
+    "pre-commit": "lint-staged",
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
+    "*.{ts,tsx}": [
+      "prettier --write",
+      "eslint src/ --fix",
       "git add"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "eslintConfig": {
     "extends": [
