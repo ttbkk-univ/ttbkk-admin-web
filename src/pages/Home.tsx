@@ -15,7 +15,7 @@ function Home() {
       alert('Not logged now');
     }
   };
-
+  asdf;
   return (
     <div className="App">
       <header className="App-header">{isLogged ? 'Logged' : 'Not Logged'}</header>
