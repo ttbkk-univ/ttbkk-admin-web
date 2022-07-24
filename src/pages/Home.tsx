@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import '../App.css';
-import GoogleLoginButton from 'components/GoogleLoginButton';
+import GoogleLoginButton from '@/components/GoogleLoginButton';
 import { googleLogout } from '@react-oauth/google';
 
-function Home() {
+function Home(): JSX.Element {
   const [isLogged, setIsLogged] = useState(false);
 
   const onClickGoogleLogout = () => {

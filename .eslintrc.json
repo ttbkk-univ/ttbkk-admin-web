@@ -20,6 +20,7 @@
       "jsx": true
     },
     "ecmaVersion": "latest",
+    "project": "./tsconfig.json",
     "sourceType": "module"
   },
   "plugins": ["react", "@typescript-eslint"],
@@ -28,7 +29,8 @@
     "import/resolver": {
       "node": {
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
-      }
+      },
+      "typescript": {}
     }
   }
 }
