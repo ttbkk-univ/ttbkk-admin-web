@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../App.css';
-import GoogleLoginButton from '@/components/GoogleLoginButton';
+import GoogleLoginButton from 'src/components/GoogleLoginButton';
 import { googleLogout } from '@react-oauth/google';
 
 function Home(): JSX.Element {

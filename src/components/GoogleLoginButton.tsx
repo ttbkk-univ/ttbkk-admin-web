@@ -1,13 +1,12 @@
 import React from 'react';
 import { CredentialResponse, GoogleLogin, GoogleOAuthProvider } from '@react-oauth/google';
-import { env } from '@/env';
+import { env } from 'src/env';
 
 type GoogleLoginButtonProps = {
   onLoginSuccess?: () => void;
   onLoginFailure?: () => void;
 };
 
-const GOOGLE_CLIENT_ID = env.google.clientId;
 
 const GoogleLoginButton = (props: GoogleLoginButtonProps) => {
   const { onLoginSuccess, onLoginFailure } = props;
@@ -23,7 +22,7 @@ const GoogleLoginButton = (props: GoogleLoginButtonProps) => {
   };
 
   return (
-    <GoogleOAuthProvider clientId={GOOGLE_CLIENT_ID}>
+    <GoogleOAuthProvider clientId={env.google.clientId}>
       <GoogleLogin onSuccess={onSuccess} onError={onFailure} />
     </GoogleOAuthProvider>
   );
