@@ -11,7 +11,7 @@ type GoogleLoginButtonProps = {
 const GoogleLoginButton = (props: GoogleLoginButtonProps) => {
   const { onLoginSuccess, onLoginFailure } = props;
   const onSuccess = (response: CredentialResponse) => {
-    // console.log(response);
+    console.log(response);
     // 서버로 credential 보내는 코드 위치
 
     onLoginSuccess?.();
